@@ -5,6 +5,7 @@ The twin sum is defined as the sum of a node and its twin.
 
 Given the head of a linked list with even length, return the maximum twin sum of the linked list.*/
 
+/*Tc O(n) but SC is O(1)*/
 class Solution
 {
 public:
@@ -57,25 +58,25 @@ public:
         *head = prev;
     }
 
-    /*Tc O(n) but SC is O(1)*/
+    /*TC O(n) SC is O(n)*/
 
-    /*
     vector<int> v;
-    while(head!=NULL)
-        {
-            v.push_back(head->val);
-            head=head->next;
-        }
+    while (head != NULL)
+    {
+        v.push_back(head->val);
+        head = head->next;
+    }
 
-        int i=0,j=v.size()-1;
+    int i = 0, j = v.size() - 1;
 
-        int maxi=0;
+    int maxi = 0;
 
-        while(i<v.size()-1 && j>=0 && i<j)
-        {
-            maxi=max(maxi,(v[i]+v[j]));
-            i++;j--;
-        }
+    while (i < v.size() - 1 && j >= 0 && i < j)
+    {
+        maxi = max(maxi, (v[i] + v[j]));
+        i++;
+        j--;
+    }
 
-        return maxi;*/
+    return maxi;
 };
